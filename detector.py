@@ -3,7 +3,6 @@ import base64
 import math
 from typing import List, Dict, Any
 from collections import Counter
-
 class SecretFinding:
     def __init__(self, secret_type: str, value: str, line: int, confidence: float, context: str):
         self.secret_type = secret_type
@@ -173,4 +172,5 @@ def get_recommendation(secret_type: str) -> str:
         'OAuth Client Secret': 'Regenerate this OAuth client secret and store it securely in environment variables.',
     }
     
+
     return recommendations.get(secret_type, 'Remove this secret from code and store it securely using environment variables or a secrets management system.')
